@@ -23,7 +23,7 @@ const solution = (input, equalsNumber) => {
 		expression = formatExpression(paddedCur, input);
 
 		// if this equals our number return it
-		if (eval(expression) === equalsNumber) {
+		if (new Function(`return ${expression}`)() === equalsNumber) {
 			const answer = `${expression} = ${equalsNumber}`;
 			return answer;
 		}

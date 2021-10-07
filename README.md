@@ -28,3 +28,4 @@ My second thought after Randomize. I ultimately found the odometer solution more
 - [interesting thread re: permutations](https://stackoverflow.com/questions/9960908/permutations-in-javascript/22063440#22063440) (Ultimately used very little from this but still interesting)
 - [padStart](https://stackoverflow.com/questions/2998784/how-to-output-numbers-with-leading-zeros-in-javascript)
 - [thread on base math in JS](https://www.reddit.com/r/learnjavascript/comments/1nas88/how_do_i_increment_a_number_in_a_base_other_than/)
+- [eval vs new Function](https://stackoverflow.com/questions/14725498/converting-string-to-expression/14725576)
