@@ -24,8 +24,8 @@ const solution = (input, equalsNumber) => {
 
 		// if this equals our number return it
 		if (eval(expression) === equalsNumber) {
-			const solution = `${expression} = ${equalsNumber}`;
-			return solution;
+			const answer = `${expression} = ${equalsNumber}`;
+			return answer;
 		}
 
 		// otherwise go to the next number
