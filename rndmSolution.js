@@ -2,7 +2,7 @@ let count = 0;
 const solution = (input, equalsNumber) => {
 	let answer;
 
-	// format input to allow for operators to be inserted into
+	// function to format input to allow for operators to be inserted into
 	const emptyOperatorArray = [...input]
 		// map over input, if index is not the last element return an arraay of el and empty space
 		.map((el, idx) => (idx < input.length - 1 ? [el, ' '] : [el]))
@@ -20,6 +20,7 @@ const solution = (input, equalsNumber) => {
 			})
 			.join('');
 
+		// add a count to find out how many times random configurations were tried
 		count++;
 	}
 

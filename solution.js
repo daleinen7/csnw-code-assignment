@@ -1,8 +1,12 @@
 const solution = (input, equalsNumber) => {
 	const operators = ['', '-', '+'];
+
+	const base = operators.length;
+	const slots = input.length - 1;
+
 	let cur = 0;
 
-	// takes current number and zippers it with input
+	// takes current number (configuration of operators) and zippers it with input
 	const formatExpression = (opSet, numSet) => {
 		return [...numSet]
 			.map((el, idx) =>
@@ -12,11 +16,8 @@ const solution = (input, equalsNumber) => {
 			.join('');
 	};
 
-	while (
-		(cur.toString(operators.length) <=
-			parseInt(operators.length ** (input.length - 1)),
-		operators.length)
-	) {
+	// while number being checked is less than possible outcomes (converted to base)
+	while ((cur.toString(operators.length) <= parseInt(base ** slots), base)) {
 		expression = formatExpression(
 			cur.toString(operators.length).padStart(8, '0'),
 			input

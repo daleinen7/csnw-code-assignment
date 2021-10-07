@@ -18,9 +18,9 @@ This is the second solution I came up with. I was inspired by an odometer of a c
 
 ## Resources
 
-[number of solutions](https://www.cut-the-knot.org/do_you_know/digits.shtml)
-[](https://newbedev.com/how-to-insert-a-new-element-in-between-all-elements-of-a-js-array)
-[](https://stackoverflow.com/questions/447783/how-do-i-calculate-the-number-of-permutations-in-base-3-combinatorics)
-[](https://stackoverflow.com/questions/9960908/permutations-in-javascript/22063440#22063440)
-[](https://stackoverflow.com/questions/2998784/how-to-output-numbers-with-leading-zeros-in-javascript)
-[](https://www.reddit.com/r/learnjavascript/comments/1nas88/how_do_i_increment_a_number_in_a_base_other_than/)
+- [number of solutions](https://www.cut-the-knot.org/do_you_know/digits.shtml)
+- [zipper function](https://newbedev.com/how-to-insert-a-new-element-in-between-all-elements-of-a-js-array)
+- [helpful thoughts](https://stackoverflow.com/questions/447783/how-do-i-calculate-the-number-of-permutations-in-base-3-combinatorics)
+- [interesting thread re: permutations](https://stackoverflow.com/questions/9960908/permutations-in-javascript/22063440#22063440) (Ultimately used very little from this but still interesting)
+- [padStart](https://stackoverflow.com/questions/2998784/how-to-output-numbers-with-leading-zeros-in-javascript)
+- [thread on base math in JS](https://www.reddit.com/r/learnjavascript/comments/1nas88/how_do_i_increment_a_number_in_a_base_other_than/)
