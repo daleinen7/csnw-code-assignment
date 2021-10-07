@@ -20,7 +20,6 @@ const solution = (input, equalsNumber) => {
 
 		// call zipper on input and current iteration
 		expression = formatExpression(paddedCur, input);
-		console.log(expression);
 		// if this equals our number return it
 		if (new Function(`return ${expression}`)() === equalsNumber) {
 			const answer = `${expression} = ${equalsNumber}`;
