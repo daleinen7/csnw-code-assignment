@@ -21,6 +21,7 @@ const solution = (input, equalsNumber) => {
 
 			if (eval(expression) === equalsNumber) {
 				const answer = `${expression} = ${equalsNumber}`;
+				console.log('This line runs');
 				return answer;
 			}
 		} else {
