@@ -18,7 +18,7 @@ What I did like about it though was it can return a different solution each time
 
 ### Recursion
 
-My second thought after Randomize. I ultimately found the odometer solution more straightforward and abandoned this approach. After finding the Odometer solution, I came back to this and got further with it. As of now it still doens't work.
+My second thought after Randomize. I ultimately found the odometer solution more straightforward and abandoned this approach. After finding the Odometer solution, I came back to this and got further with it. As of now it still doesn't work.
 
 ## Resources
 
