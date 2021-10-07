@@ -1,6 +1,5 @@
 const solution = (input, equalsNumber) => {
 	const operators = ['', '-', '+'];
-
 	const base = operators.length;
 	const slots = input.length - 1;
 
@@ -18,16 +17,22 @@ const solution = (input, equalsNumber) => {
 
 	// while number being checked is less than possible outcomes (converted to base)
 	while ((cur.toString(operators.length) <= parseInt(base ** slots), base)) {
-		expression = formatExpression(
-			cur.toString(operators.length).padStart(8, '0'),
-			input
-		);
+		const paddedCur = cur.toString(operators.length).padStart(8, '0');
+
+		// call zipper on input and current iteration
+		expression = formatExpression(paddedCur, input);
+
+		// if this equals our number return it
 		if (eval(expression) === equalsNumber) {
-			return `${expression} = ${equalsNumber}`;
+			const solution = `${expression} = ${equalsNumber}`;
+			return solution;
 		}
 
+		// otherwise go to the next number
 		cur++;
 	}
+
+	// in case there is no solution
 	return 'no solution';
 };
 
