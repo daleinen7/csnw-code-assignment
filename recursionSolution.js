@@ -19,7 +19,7 @@ const solution = (input, equalsNumber) => {
 		let answer;
 		if (s.length === slots) {
 			expression = formatExpression(s, input);
-			if (eval(expression) === equalsNumber) {
+			if (new Function(`return ${expression}`)() === equalsNumber) {
 				answer = `${expression} = ${equalsNumber}`;
 				console.log(answer);
 				return answer;
@@ -29,7 +29,6 @@ const solution = (input, equalsNumber) => {
 				generate(s + i, slots);
 			}
 		}
-		return 'whence';
 	};
 
 	return generate('', slots);
