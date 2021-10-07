@@ -15,7 +15,7 @@ const solution = (input, equalsNumber) => {
 	};
 
 	// while number being checked is less than possible outcomes (converted to base)
-	while ((cur.toString(operators.length) <= parseInt(base ** slots), base)) {
+	while (cur <= base ** slots) {
 		const paddedCur = cur.toString(operators.length).padStart(8, '0');
 
 		// call zipper on input and current iteration
