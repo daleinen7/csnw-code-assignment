@@ -8,10 +8,9 @@ const solution = (input, equalsNumber) => {
 	// takes current number (configuration of operators) and zippers it with input
 	const formatExpression = (opSet, numSet) => {
 		return [...numSet]
-			.map((el, idx) =>
+			.flatMap((el, idx) =>
 				idx < input.length - 1 ? [el, operators[opSet[idx]]] : [el]
 			)
-			.reduce((a, b) => a.concat(b))
 			.join('');
 	};
 
@@ -21,7 +20,7 @@ const solution = (input, equalsNumber) => {
 
 		// call zipper on input and current iteration
 		expression = formatExpression(paddedCur, input);
-
+		console.log(expression);
 		// if this equals our number return it
 		if (new Function(`return ${expression}`)() === equalsNumber) {
 			const answer = `${expression} = ${equalsNumber}`;
