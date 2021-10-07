@@ -18,7 +18,6 @@ const solution = (input, equalsNumber) => {
 	const generate = (s, slots) => {
 		let answer;
 		if (s.length === slots) {
-			console.log(s);
 			expression = formatExpression(s, input);
 			if (new Function(`return ${expression}`)() === equalsNumber) {
 				answer = `${expression} = ${equalsNumber}`;
@@ -26,8 +25,8 @@ const solution = (input, equalsNumber) => {
 				return answer;
 			}
 		} else {
-			console.log('other ', s);
 			for (let i = 0; i < base; i++) {
+				// returns first iteration rather than calling all iterations and returning value
 				return generate(s + i, slots);
 			}
 		}
