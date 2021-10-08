@@ -1,5 +1,5 @@
-let count = 0;
 const solution = (input, equalsNumber) => {
+	let count = 0;
 	let answer;
 
 	// function to format input to allow for operators to be inserted into
@@ -25,9 +25,18 @@ const solution = (input, equalsNumber) => {
 	}
 
 	return `Answer: ${answer} = ${equalsNumber}`;
+	// return count; // uncomment for average program
 };
 
 // number set to test against
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-console.log(solution(nums, 100), 'Count: ', count);
+console.log(solution(nums, 100));
+
+// // uncomment for an average of how many times it takes to find solution
+// const solutions = [];
+// for (let i = 0; i < 8000; i++) {
+// 	solutions.push(solution(nums, 100));
+// }
+// const average = (arr) => arr.reduce((p, c) => p + c, 0) / arr.length;
+// console.log(average(solutions));
