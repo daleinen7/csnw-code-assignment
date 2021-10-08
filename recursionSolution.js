@@ -5,7 +5,7 @@ const solution = (input, equalsNumber) => {
 
 	// takes current number (configuration of operators) and zippers it with input
 	const formatExpression = (opSet, numSet) => {
-		return [...numSet]
+		return numSet
 			.map((el, idx) =>
 				idx < input.length - 1 ? [el, operators[opSet[idx]]] : [el]
 			)
@@ -19,6 +19,7 @@ const solution = (input, equalsNumber) => {
 			expression = formatExpression(s, input);
 			if (new Function(`return ${expression}`)() === equalsNumber) {
 				let answer = `${expression} = ${equalsNumber}`;
+				console.log(answer);
 				return answer;
 			}
 		} else {
@@ -26,7 +27,6 @@ const solution = (input, equalsNumber) => {
 				// returns first iteration rather than calling all iterations and returning value
 				generate(s + i, slots);
 			}
-			return false;
 		}
 	};
 

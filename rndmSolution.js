@@ -3,7 +3,7 @@ const solution = (input, equalsNumber) => {
 	let answer;
 
 	// function to format input to allow for operators to be inserted into
-	const emptyOperatorArray = [...input]
+	const emptyOperatorArray = input
 		// map over input, if index is not the last element return an arraay of el and empty space
 		.map((el, idx) => (idx < input.length - 1 ? [el, ' '] : [el]))
 		// flatten array

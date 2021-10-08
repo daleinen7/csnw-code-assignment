@@ -6,13 +6,12 @@ const solution = (input, equalsNumber) => {
 	let iteration = 0;
 
 	// takes current number (configuration of operators) and zippers it with input
-	const formatExpression = (opSet, numSet) => {
-		return [...numSet]
+	const formatExpression = (opSet, numSet) =>
+		numSet
 			.flatMap((el, idx) =>
 				idx < numSet.length - 1 ? [el, operators[opSet[idx]]] : [el]
 			)
 			.join('');
-	};
 
 	// while number being checked is less than possible outcomes (converted to base)
 	while (iteration <= base ** slots) {
