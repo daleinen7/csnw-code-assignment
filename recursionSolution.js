@@ -3,8 +3,6 @@ const solution = (input, equalsNumber) => {
 	const base = operators.length;
 	const slots = input.length - 1;
 
-	let cur = 0;
-
 	// takes current number (configuration of operators) and zippers it with input
 	const formatExpression = (opSet, numSet) => {
 		return [...numSet]
@@ -16,19 +14,19 @@ const solution = (input, equalsNumber) => {
 	};
 
 	const generate = (s, slots) => {
-		let answer;
+		console.log(s);
 		if (s.length === slots) {
 			expression = formatExpression(s, input);
 			if (new Function(`return ${expression}`)() === equalsNumber) {
-				answer = `${expression} = ${equalsNumber}`;
-				console.log(answer);
+				let answer = `${expression} = ${equalsNumber}`;
 				return answer;
 			}
 		} else {
 			for (let i = 0; i < base; i++) {
 				// returns first iteration rather than calling all iterations and returning value
-				return generate(s + i, slots);
+				generate(s + i, slots);
 			}
+			return false;
 		}
 	};
 

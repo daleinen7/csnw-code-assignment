@@ -3,23 +3,23 @@ const solution = (input, equalsNumber) => {
 	const base = operators.length;
 	const slots = input.length - 1;
 
-	let cur = 0;
+	let iteration = 0;
 
 	// takes current number (configuration of operators) and zippers it with input
 	const formatExpression = (opSet, numSet) => {
 		return [...numSet]
 			.flatMap((el, idx) =>
-				idx < input.length - 1 ? [el, operators[opSet[idx]]] : [el]
+				idx < numSet.length - 1 ? [el, operators[opSet[idx]]] : [el]
 			)
 			.join('');
 	};
 
 	// while number being checked is less than possible outcomes (converted to base)
-	while (cur <= base ** slots) {
-		const paddedCur = cur.toString(operators.length).padStart(8, '0');
+	while (iteration <= base ** slots) {
+		const paddedIteration = iteration.toString(base).padStart(slots, '0');
 
 		// call zipper on input and current iteration
-		expression = formatExpression(paddedCur, input);
+		expression = formatExpression(paddedIteration, input);
 		// if this equals our number return it
 		if (new Function(`return ${expression}`)() === equalsNumber) {
 			const answer = `${expression} = ${equalsNumber}`;
@@ -27,7 +27,7 @@ const solution = (input, equalsNumber) => {
 		}
 
 		// otherwise go to the next number
-		cur++;
+		iteration++;
 	}
 
 	// in case there is no solution
