@@ -15,10 +15,10 @@ const solution = (input, equalsNumber) => {
 
 	// while number being checked is less than possible outcomes (converted to base)
 	while (iteration <= base ** slots) {
-		const paddedIteration = iteration.toString(base).padStart(slots, '0');
+		const baseIteration = iteration.toString(base).padStart(slots, '0');
 
-		// call zipper on input and current iteration
-		expression = formatExpression(paddedIteration, input);
+		// combine input and baseIteration
+		expression = formatExpression(baseIteration, input);
 		// if this equals our number return it
 		if (new Function(`return ${expression}`)() === equalsNumber) {
 			const answer = `${expression} = ${equalsNumber}`;
